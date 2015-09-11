@@ -8,3 +8,4 @@ set smartindent
 colorscheme delek
 cmap w!! %!sudo tee > /dev/null %
 set nu
+autocmd Filetype gitcommit setlocal spell textwidth=72
