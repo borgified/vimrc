@@ -10,7 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'apachestyle'
-
+Plugin 'vadv/vim-chef'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -52,3 +52,7 @@ colorscheme delek
 cmap w!! %!sudo tee > /dev/null %
 set nu
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+autocmd FileType ruby,eruby set filetype=ruby.eruby.chef
